@@ -1,5 +1,7 @@
 package org.ltz.project_readonly_mode;
 
+import com.intellij.notification.Notification;
+import com.intellij.notification.NotificationType;
 import com.intellij.notification.Notifications;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -28,7 +30,11 @@ public class ReadOnlyAllFilesAction extends AnAction {
 
         // 提示用户操作完成
         e.getRequiredData(CommonDataKeys.PROJECT).getMessageBus()
-                .syncPublisher(Notifications.TOPIC);
+                .syncPublisher(Notifications.TOPIC).notify(new Notification(
+                        "Notification.info",  // 使用你的通知组ID
+                        "All files in project are now readonly.",
+                        NotificationType.INFORMATION
+                ));
     }
 
     private static void setFilesReadOnly(VirtualFile directory) {

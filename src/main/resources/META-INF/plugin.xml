@@ -1,21 +1,22 @@
 <idea-plugin>
-    <id>org.ltz.Project-ReadOnly-Mode</id>
+       <id>org.ltz.Project-ReadOnly-Mode</id>
+       <name>Project Read-Only Mode</name>
+       <version>1.0</version>
+       <vendor email="2811328244@qq.com">ltz</vendor>
 
-    <name>Project Read-Only Mode</name>
-    <version>1.0</version>
-    <vendor email="2811328244@qq.com">ltz</vendor>
-
-    <description><![CDATA[
-    This plugin is designed to make the project read-only.The function can make us much easier to read open-source.<br>
-  ]]></description>
-    <actions>
-        <action id="ReadOnlyAllFilesAction" class="org.ltz.project_readonly_mode.ReadOnlyAllFilesAction" text="Set All Files to Read-Only" description="Set all project files to read-only mode">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
-        </action>
-        <action id="WriteableAllFilesAction" class="org.ltz.project_readonly_mode.WriteableAllFilesAction" text="Set All Files to Writeable" description="Set all project files to write-able mode">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
-        </action>
-    </actions>
-    <depends>com.intellij.modules.platform</depends>
-
+       <description><![CDATA[
+       This plugin is designed to make the project read-only.The function can make us much easier to read open-source.<br>
+     ]]></description>
+       <actions>
+           <action id="ReadOnlyAllFilesAction" class="org.ltz.project_readonly_mode.ReadOnlyAllFilesAction" text="Set All Files to Read-Only" description="Set all project files to read-only mode">
+               <add-to-group group-id="ToolsMenu" anchor="last"/>
+           </action>
+           <action id="WriteableAllFilesAction" class="org.ltz.project_readonly_mode.WriteableAllFilesAction" text="Set All Files to Writeable" description="Set all project files to write-able mode">
+               <add-to-group group-id="ToolsMenu" anchor="last"/>
+           </action>
+       </actions>
+       <extensions defaultExtensionNs="com.intellij">
+           <notificationGroup id="Notification.info" displayType="BALLOON"/>
+       </extensions>
+       <depends>com.intellij.modules.platform</depends>
 </idea-plugin>
