@@ -1,0 +1,20 @@
+<idea-plugin>
+    <id>org.ltz.Project-ReadOnly-Mode</id>
+
+    <name>Project Read-Only Mode</name>
+    <version>1.0</version>
+    <vendor email="2811328244@qq.com">ltz</vendor>
+
+    <description><![CDATA[
+    This plugin is designed to make the project read-only.The function can make us much easier to read open-source.<br>
+  ]]></description>
+    <actions>
+        <action id="SetProjectReadOnly" class="org.ltz.project_readonly_mode.SetProjectReadOnlyAction" text="Set Project Read-Only" description="Set all project files to read-only">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+        <action id="SetProjectWritable" class="org.ltz.project_readonly_mode.SetProjectWritableAction" text="Set Project Writable" description="Re-enable write access to project files">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>
