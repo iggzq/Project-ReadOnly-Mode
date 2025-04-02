@@ -9,10 +9,10 @@
     This plugin is designed to make the project read-only.The function can make us much easier to read open-source.<br>
   ]]></description>
     <actions>
-        <action id="SetProjectReadOnly" class="org.ltz.project_readonly_mode.SetProjectReadOnlyAction" text="Set Project Read-Only" description="Set all project files to read-only">
+        <action id="ReadOnlyAllFilesAction" class="org.ltz.project_readonly_mode.ReadOnlyAllFilesAction" text="Set All Files to Read-Only" description="Set all project files to read-only mode">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
-        <action id="SetProjectWritable" class="org.ltz.project_readonly_mode.SetProjectWritableAction" text="Set Project Writable" description="Re-enable write access to project files">
+        <action id="WriteableAllFilesAction" class="org.ltz.project_readonly_mode.WriteableAllFilesAction" text="Set All Files to Writeable" description="Set all project files to write-able mode">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
         </action>
     </actions>
