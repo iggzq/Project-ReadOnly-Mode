@@ -1,7 +1,7 @@
 <idea-plugin>
        <id>org.ltz.Project-ReadOnly-Mode</id>
        <name>Project Read-Only Mode</name>
-       <version>1.0</version>
+       <version>1.1</version>
        <vendor email="2811328244@qq.com">ltz</vendor>
 
        <description><![CDATA[
